@@ -26,6 +26,7 @@ class Giveaway(commands.Cog):
         self.bot = bot
 
     @commands.command()
+    @commands.has_permissions(manage_messages=True)
     async def giveaway(self, ctx):
         embedq1 = await ctx.send(f"What discord channel should we host the Giveaway. **Example**: ``#General``")
         embedq2 = await ctx.send(f"How long should it last? ``<s|m|h|d|w>`` **Example**: ``1d``")
@@ -108,6 +109,7 @@ class Giveaway(commands.Cog):
         await msg.edit(embed=embed2)
 
     @commands.command()
+    @commands.has_permissions(manage_messages=True)
     async def reroll(self, ctx, channel: discord.TextChannel, id_: int):
         try:
             new_msg = await channel.fetch_message(id_)

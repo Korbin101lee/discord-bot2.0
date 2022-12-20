@@ -102,7 +102,7 @@ class Admin(commands.Cog):
     async def warn(self, ctx, Member: discord.User, *, reason=None):
         if ctx.message.author.guild_permissions.manage_messages:
             await ctx.send(f"<@{Member.id}> has been warned for {reason}")
-            channel = self.bot.get_channel(1050513338787975239)
+            channel = self.bot.get_channel(883145817576333342)
             embed=discord.Embed(title="Member Warned", color=0xfb00ff)
             embed.set_thumbnail(url=f"{Member.display_avatar}")
             embed.add_field(name="Member", value=f"<@{Member.id}>", inline=False)
@@ -127,7 +127,7 @@ class Admin(commands.Cog):
         if ctx.message.author.guild_permissions.kick_members:
             await ctx.send(f"<@{Member.id}> has been kicked for {reason}")
             await Member.kick()
-            channel = self.bot.get_channel(1050513338787975239)
+            channel = self.bot.get_channel(883145817576333342)
             embed=discord.Embed(title="Member Kicked", color=0xfb00ff)
             embed.set_thumbnail(url=f"{Member.display_avatar}")
             embed.add_field(name="Member", value=f"<@{Member.id}>", inline=False)
@@ -150,7 +150,7 @@ class Admin(commands.Cog):
         if ctx.message.author.guild_permissions.ban_members:
             await ctx.send(f"<@{Member.id}> has been banned for {reason}")
             await ctx.guild.ban(Member)
-            channel = self.bot.get_channel(1050513338787975239)
+            channel = self.bot.get_channel(883145817576333342)
             embed=discord.Embed(title="Member Banned", color=0xfb00ff)
             embed.set_thumbnail(url=f"{Member.display_avatar}")
             embed.add_field(name="Member", value=f"<@{Member.id}>", inline=False)
@@ -172,7 +172,7 @@ class Admin(commands.Cog):
         if ctx.message.author.guild_permissions.ban_members:
             await ctx.send(f"<@{Member.id}> has been unbanned")
             await ctx.guild.unban(Member)
-            channel = self.bot.get_channel(1050513338787975239)
+            channel = self.bot.get_channel(883145817576333342)
         else:
             await ctx.send("You do not have permission to use this command")
 

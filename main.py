@@ -16,7 +16,7 @@ import traceback
 logging.basicConfig(filename="bot.log", level=logging.DEBUG, filemode="a")
 
 
-TOKEN = 'ODg0MDkxNTYwOTgyMTEwMzA4.G4LKI3.i9sa97Dwc3sIOttOKasyCEHaEsaC0d6LpH-6z0'
+TOKEN = "ODMxOTY5NzE0MDAyNzIyODE2.YHc-LQ.msEMnZmXuLxgEkwbh2tunzqjJwQ"
 PATH_TO_FILE = 'db_build.sql'
 intents = discord.Intents.default()
 intents.message_content = True
