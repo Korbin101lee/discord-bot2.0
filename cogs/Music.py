@@ -189,7 +189,7 @@ class Music(commands.Cog):
                 await self.add_track(ctx, partial)         
 
 
-    @commands.hybrid_command(name="skip", with_app_command=True)
+    @commands.hybrid_command(name="skip", with_app_command=True, aliases=["s"])
     async def skip_command(self, ctx: commands.Context):
         """Skips currently playing song and play next song in queue.
         Args:
